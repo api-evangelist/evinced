@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.evinced.com/mcp-servers/web-mcp-server
+docs: https://developer.evinced.com/
+summary:
+  types: [apiKey]
+  api_key_in: [env]
+  oauth2_flows: []
+  notes: >-
+    Evinced SDKs and MCP servers authenticate with a service account
+    identifier plus an API key, supplied as environment variables. An offline
+    access token is available as an alternative for the mobile server. There is
+    no public OpenAPI-declared securityScheme (Evinced ships no public REST
+    API); this profile is derived from the published SDK/MCP setup docs.
+schemes:
+  - name: EvincedApiKey
+    type: apiKey
+    in: env
+    credentials:
+      - EVINCED_SERVICE_ID           # web MCP / web SDKs
+      - EVINCED_SERVICE_ACCOUNT_ID   # mobile MCP / mobile SDKs
+      - EVINCED_API_KEY
+      - EVINCED_ACCESS_TOKEN         # offline alternative (mobile)
+    sources: [https://developer.evinced.com/mcp-servers/web-mcp-server, https://developer.evinced.com/mcp-servers/mobile-mcp-server]
