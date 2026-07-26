@@ -1,8 +1,27 @@
 aid: evinced
 name: evinced
-description: 'evinced is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Evinced is an AI-powered digital accessibility platform that automatically
+  detects, clusters, tracks, and prevents accessibility (WCAG/ADA) issues across
+  web and mobile applications. It ships developer-first automation SDKs for
+  Selenium, Cypress, Playwright, WebdriverIO, TestCafe, Appium, Espresso, and
+  XCUITest, plus Web and Mobile Model Context Protocol (MCP) servers that let AI
+  coding agents (Cursor, Claude, VS Code, Continue) query accessibility advice
+  and run automated remediation in-flow. Backed by Insight Partners, Evinced is
+  used by Amazon, Capital One, Verizon, and Hyundai.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://res.cloudinary.com/evinced-inc/image/upload/v1704822647/Evinced_logo_500x500_1_621d40d1d4.png
 url: https://raw.githubusercontent.com/api-evangelist/evinced/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +31,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Accessibility
+- Testing
+- Quality Assurance
 - Devops
+- Web
+- Mobile
+- MCP
+- SDK
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,34 @@ maintainers:
 common:
 - type: Website
   url: https://www.evinced.com/
+- type: DeveloperPortal
+  url: https://developer.evinced.com/
+- type: Documentation
+  url: https://developer.evinced.com/
+- type: Support
+  url: https://knowledge.evinced.com/
+- type: Blog
+  url: https://www.evinced.com/blog
+- type: Login
+  url: https://hub.evinced.com/
+- type: TermsOfService
+  url: https://www.evinced.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.evinced.com/privacy-policy
+- type: MCPServer
+  url: mcp/evinced-mcp.yml
+- type: Packages
+  url: packages/evinced-packages.yml
+- type: SDKs
+  url: packages/evinced-packages.yml
+- type: Authentication
+  url: authentication/evinced-authentication.yml
+- type: DomainSecurity
+  url: security/evinced-domain-security.yml
+- type: LLMsTxt
+  url: llms/evinced-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

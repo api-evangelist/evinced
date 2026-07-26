@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://developer.evinced.com/mcp-servers/web-mcp-server
+docs: https://developer.evinced.com/mcp-servers/mobile-mcp-server
+summary: >-
+  Evinced publishes two first-party MCP servers that let AI coding agents
+  (Cursor, Claude, VS Code, Continue) run Evinced's AI-powered accessibility
+  analysis and remediation against web and mobile apps. Both run locally over
+  stdio via npx and authenticate with an Evinced service account id + API key.
+servers:
+  - name: evinced-web-mcp
+    package: '@evinced/mcp-server-web'
+    registry: npm
+    transport: stdio
+    command: npx
+    args: ['-y', '@evinced/mcp-server-web']
+    docs: https://developer.evinced.com/mcp-servers/web-mcp-server
+    auth:
+      env:
+        - EVINCED_SERVICE_ID
+        - EVINCED_API_KEY
+    options:
+      - flag: '--extension'
+        description: Enable browser-extension-backed analysis (recommended).
+    tools:
+      - name: evinced_analyze_webpage
+        description: Analyze a web page for accessibility (WCAG) issues.
+    prompts:
+      - name: evinced_fix_webpage_issues
+        description: Systematic remediation workflow guidance for detected issues.
+  - name: evinced-mobile-mcp
+    package: '@evinced/mcp-server-mobile'
+    registry: npm
+    transport: stdio
+    command: npx
+    args: ['-y', '@evinced/mcp-server-mobile@latest']
+    docs: https://developer.evinced.com/mcp-servers/mobile-mcp-server
+    auth:
+      env:
+        - EVINCED_SERVICE_ACCOUNT_ID
+        - EVINCED_API_KEY
+        - EVINCED_ACCESS_TOKEN   # offline alternative
+    tools:
+      - name: evinced_accessibility_analyze
+        description: Analyze a mobile screen/flow for accessibility issues.
+      - name: evinced_get_remediation_instructions
+        description: Return remediation guidance for detected mobile issues.

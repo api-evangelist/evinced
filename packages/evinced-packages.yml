@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=evinced
+notes: >-
+  Evinced's automation SDKs (Selenium, Cypress, Playwright, WebdriverIO,
+  TestCafe, Appium, Espresso/UIAutomator, XCUITest) are distributed to
+  customers via Evinced's private Artifactory registry and are documented at
+  developer.evinced.com; they are not published to public registries. The
+  publicly resolvable first-party npm packages are the shared TypeScript
+  definitions and the two MCP servers below.
+packages:
+  - language: javascript
+    registry: npm
+    name: '@evinced/mcp-server-web'
+    url: https://www.npmjs.com/package/@evinced/mcp-server-web
+    install: npx -y @evinced/mcp-server-web
+    official: true
+    description: Evinced Web MCP server (accessibility analysis + remediation).
+  - language: javascript
+    registry: npm
+    name: '@evinced/mcp-server-mobile'
+    url: https://www.npmjs.com/package/@evinced/mcp-server-mobile
+    install: npx -y @evinced/mcp-server-mobile@latest
+    official: true
+    description: Evinced Mobile MCP server (accessibility analysis + remediation).
+  - language: typescript
+    registry: npm
+    name: evinced-web-sdk-types
+    url: https://www.npmjs.com/package/evinced-web-sdk-types
+    install: npm install evinced-web-sdk-types
+    official: true
+    description: Framework-agnostic TypeScript definitions for Evinced JavaScript SDKs.
+  - language: typescript
+    registry: npm
+    name: evinced-types
+    url: https://www.npmjs.com/package/evinced-types
+    install: npm install evinced-types
+    official: true
+    description: Framework-agnostic TypeScript definitions for Evinced JavaScript SDKs.
+sdk_families:
+  - name: Web automation SDKs
+    docs: https://developer.evinced.com/
+    targets: [Selenium (Java/JS/C#), Cypress, Playwright (Java/JS), WebdriverIO, TestCafe]
+    distribution: Evinced Artifactory (private)
+  - name: Mobile automation SDKs
+    docs: https://developer.evinced.com/
+    targets: [Appium (Java/Python), Espresso/UIAutomator, XCUITest, WebdriverIO Mobile, Android Mobile Kit]
+    distribution: Evinced Artifactory (private)
