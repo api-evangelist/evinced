@@ -9,6 +9,17 @@ description: >-
   coding agents (Cursor, Claude, VS Code, Continue) query accessibility advice
   and run automated remediation in-flow. Backed by Insight Partners, Evinced is
   used by Amazon, Capital One, Verizon, and Hyundai.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
