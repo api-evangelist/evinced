@@ -22,15 +22,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://res.cloudinary.com/evinced-inc/image/upload/v1704822647/Evinced_logo_500x500_1_621d40d1d4.png
 url: https://raw.githubusercontent.com/api-evangelist/evinced/refs/heads/main/apis.yml
